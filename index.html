@@ -1,1 +1,20 @@
 
+function updateClock() {
+  // Get the current time
+  const now = new Date();
+
+  // Format the time
+  const hours = now.getHours();
+  const minutes = now.getMinutes();
+  const seconds = now.getSeconds();
+  const time = `${hours}:${minutes}:${seconds}`;
+
+  // Display the time in the clock element
+  document.getElementById("clock").innerHTML = time;
+}
+
+// Call the function once to initialize the clock
+updateClock();
+
+// Update the clock every second
+setInterval(updateClock, 1000);
